@@ -1,8 +1,8 @@
 {
   // ponytail: assets-only Worker — serves the hand-built static site, no build, no server code.
-  // "directory": "." publishes the repo root; _headers/_redirects are honored natively.
-  // Same working pattern as the ikad-showcase mirror.
+  // Serves ./public (a dedicated dir) so repo-root junk (.git, .wrangler, config) can never be published.
+  // _headers/_redirects inside public/ are honored natively.
   "name": "bennett-dyson-site",
   "compatibility_date": "2026-07-01",
-  "assets": { "directory": "." }
+  "assets": { "directory": "./public" }
 }
